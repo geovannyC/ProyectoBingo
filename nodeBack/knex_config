@@ -1,0 +1,3 @@
+Integracion KNEX
+- sudo npm i knex -g
+- sudo npm i -g nodemon
