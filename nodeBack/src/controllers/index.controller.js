@@ -3,7 +3,6 @@
 /* eslint-disable no-console */
 const { Pool } = require("pg");
 
-// *IMPORTANTE -> ACTUALIZAR DATOS DE POSTGRES DE ACUERDO A LOS DE SU MAQUINA PARA REALIZAR PRUEBAS
 const pool = new Pool({
   host: "localhost",
   user: "postgres",
@@ -11,7 +10,6 @@ const pool = new Pool({
   database: "bingo",
   post: "5432"
 });
-
 
 // GET -> Tabla Personas
 const getPersonas = async (req, res) => {
@@ -80,6 +78,7 @@ const createAdmi = async (req, res) => {
     }
   });
 };
+
 // tabla administrador Delete
 const deleteAdmi = async (req, res) => {
   // eslint-disable-next-line radix

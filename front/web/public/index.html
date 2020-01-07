@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bingo Game</title>
+    <link rel="stylesheet" type="text/css" href="build/tailwind.css">
+</head>
+<body>
+    <img class="h-64 center_horizontal" src="./assets/logo_app.png" alt="logo">
+
+    <div class="w-64 center_horizontal">
+        <!-- <a class="text-center center_horizontal text-yellow-300 text-4xl border border-orange-500 bg-orange-500 shadow-border bg-blue hover:bg-blue-dark text-sm py-3 px-4 m-20 tracking-wide uppercase font-bold" href="first_screen.html">Ingresar</a> -->
+    </div>
+
+    
+    <!-- Trigger/Open The Modal -->
+    <button class="text-center center_horizontal text-gray-600 text-xl border border-orange-500 shadow-border bg-blue hover:bg-blue-dark text-sm py-3 px-4 m-20 tracking-wide font-bold" id="myBtn">Registrarse</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 class="text-center h-20 text-3xl">Ingrese sus datos</h1>
+
+            <form class="text-xl" action="" method="post">
+                <label class="center_horizontal" for="nombre">Nombre de usuario: </label>
+                <input class="center_horizontal border border-orange-500" type="text" id="nombre" name="nombre" placeholder="Elsa Yayin">
+
+                <br><br>
+                <button class="center_horizontal border border-orange-500" type="button" onclick="postDataPersona()">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <button class="center_horizontal border border-orange-500" type="button" onclick="getDataPersona()">Registrarme</button>
+    <p class="bg-red-500 h-20 text-black" id="getData"></p> -->
+
+</body>
+
+
+<script src="./js/main.js"></script>
+
+
+</html>
