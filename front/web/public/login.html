@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Iniciar sesión</title>
     <link rel="stylesheet" type="text/css" href="build/tailwind.css">
 </head>
 
@@ -23,53 +23,31 @@
   </div>
 
   <div class="flex">
-
       <div class="flex-1 md:mt-1 shadow bg-green-900 ">
-          <!-- Inicio Sesion -->
+
           <div class="bg-green-900 p-10 shadow text-xl text-white">
-              <h1 class=" flex items-center text-2xl text-white font-serif ml-64 mr-64 " >
-                  INICIAR SESION</h1>
-          </div>
-          <!-- FIN sesion-->
-
-          <!-- campos -->
-
-          <div class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4 flex flex-col ml-64 mr-64">
-            
-              <div class="mb-4">
-                  <label class="block text-grey-darker text-sm   font-bold mb-2" name="username">
-                      Correo
-                  </label>
-                  <input class="shadow  border rounded w-full py-2 px-3 text-grey-darker" 
-                      type="text" placeholder="Correo">
-              </div>
-              <div class="mb-6">
-                  <label class="block text-grey-darker text-sm  font-bold mb-2" >
-                      Password
-                  </label>
-                  <input
-                      class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
-                       type="password" placeholder="******************">
-              </div>
-              <div class="flex items-center justify-between">
-                  <button class="bg-green-900 hover:bg-green-600 text-white font-bold py-2 px-4 rounded" type="button" onclick="window.location.href='cartilla.html'" >
-                      Ingresar
-                  </button>
-                  <button class="bg-green-900 hover:bg-green-600 text-white font-bold py-2 px-4 rounded" type="button" onclick="window.location.href='registro.html'" >
-                    Registrarse
-                </button>
-                  <a class="inline-block align-baseline font-bold text-sm text-gray-700 hover:border-transparent" href="#">
-                      olvido su contraseña?
-                  </a>
-              </div>
+              <h1 class=" flex items-center text-2xl text-white font-serif ml-64 mr-64">INICIAR SESIÓN</h1>
           </div>
 
-          <!--campos -->
+          <form class="bg-white shadow rounded px-8 pt-6 pb-8 mb-4 flex flex-col ml-64 mr-64" action="" method="post">
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm   font-bold mb-2" for="persona_email">Correo Electrónico</label>
+                <input class="shadow  border rounded w-full py-2 px-3 text-grey-darker" name="persona_email" id="persona_email" type="text" placeholder="mail@gmail.com" autocomplete="off">
+            </div>
+            <div class="mb-6">
+                <label class="block text-grey-darker text-sm  font-bold mb-2">Contraseña</label>
+                <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" type="password" placeholder="******">
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-green-900 hover:bg-green-600 text-white font-bold py-2 px-4 rounded" type="button" onclick="">Ingresar</button>
+                <a class="float-right bg-red-600 hover:bg-green-600 text-white font-bold py-2 px-4 rounded" type="button" href="index.html">Volver</a>
+            </div>
+        </form>
       </div>
-
-  </div>
   </div>
   
 </body>
+
+<script src="./js/main.js"></script>
 
 </html>
