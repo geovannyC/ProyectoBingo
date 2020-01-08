@@ -8,7 +8,7 @@ postDataPersona = () => {
   let persona_nombre = document.getElementById('persona_nombre').value
   let persona_email = document.getElementById('persona_email').value
   let persona_clave = document.getElementById('persona_clave').value
-  console.log(persona_nombre)
+  
   let data = 
   `{
     "tabla": "${tabla}", 
@@ -28,23 +28,21 @@ postDataPersona = () => {
     alert("Complete todos los datos para continuar...")
   }else{
     http.send(data)
-    window.location.assign("./index.html")
+    window.location.assign("./login.html")
   }
 
 }
 
 //GET DATA IN DATABASE
 getDataPersona = () => {
-  http.open('GET', API_URL, true )
+  http.open('GET', API_URL+"?tabla=persona")
 
-  http.onreadystatechange = function() {
-    if(http.readyState == 4 && http.status == 200) {
-      alert(http.responseText);
-    }
-  }
+  http.responseType = 'json'
 
   http.onload = () => {
-    alert(`Loaded: ${http.status} ${http.response}`);
+    var datos = (http.response).datos[0].persona_nombre
+    console.log(datos);
+    document.getElementById('test').innerHTML = datos;
   }
 
   http.send()
