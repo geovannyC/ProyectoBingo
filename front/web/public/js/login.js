@@ -27,7 +27,6 @@ getDataLogin = () => {
 
     if (correo === correoBD) {
       if (contraseña === contraseñaBD) {
-        alert(correo + contraseña);
         window.location.assign("./index.html");
       }
     } else {
