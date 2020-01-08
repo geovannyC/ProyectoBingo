@@ -1,10 +1,10 @@
 //POST DATA IN DATABASE
 const http = new XMLHttpRequest();
 
-const API_URL = "http://localhost:4000/persona"
+const API_URL = "http://localhost:8001/server/bingo"
 
 postDataPersona = () => {
-  http.open('POST', API_URL, true);
+  http.open('POST', API_URL+"?tabla=persona", true);
   http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   http.onreadystatechange = function() {
@@ -13,21 +13,22 @@ postDataPersona = () => {
     }
   }
 
-  let persona_nombre = document.getElementById('nombre').value
+  let persona_nombre = document.getElementById('persona_nombre').value
 
-  let data = (`nombre=${persona_nombre}`)
+  let data = (`persona_nombre=${persona_nombre}`)
 
   http.send(data)
 }
 
 //GET DATA IN DATABASE
 getDataPersona = () => {
+  http.open('GET', API_URL, true )
+
   http.onreadystatechange = function() {
     if(http.readyState == 4 && http.status == 200) {
       alert(http.responseText);
     }
   }
-  http.open('GET', API_URL, true )
 
   http.send()
   alert(http.responseText);

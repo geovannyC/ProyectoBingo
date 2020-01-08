@@ -40,6 +40,18 @@ let postDatos = (req, res) => {
     })
 }
 
+let createPersona = async (req, res) => {
+    let tabla = req.query.tabla
+    let datos = req.body.datos
+    await pool.query(`insert into persona(nombre,idcartilla) values($1,$2)`, [data])
+    res.json({
+        ok: true,
+        body: {
+            user: datos
+        }
+    });
+}
+
 let updateDatos = (req, res) => {
     let tabla = req.body.tabla
     let datos = req.body.datos
