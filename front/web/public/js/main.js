@@ -1,11 +1,12 @@
 //POST DATA IN DATABASE
-const http = new XMLHttpRequest();
+const http = new XMLHttpRequest()
 
 const API_URL = "http://localhost:8001/server/bingo"
 
 postDataPersona = () => {
-  http.open('POST', API_URL+"?tabla=persona", true);
-  http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  let tabla = 'persona'
+  http.open('POST', API_URL, true)
+  http.setRequestHeader("Content-Type", "application/json")
 
   http.onreadystatechange = function() {
     if(http.readyState == 4 && http.status == 200) {
@@ -15,7 +16,13 @@ postDataPersona = () => {
 
   let persona_nombre = document.getElementById('persona_nombre').value
 
-  let data = (`persona_nombre=${persona_nombre}`)
+  let data = `{
+              "tabla": "${tabla}", 
+              "datos":
+                {
+                  "persona_nombre": "${persona_nombre}"
+                }
+             }`
 
   http.send(data)
 }
@@ -31,8 +38,6 @@ getDataPersona = () => {
   }
 
   http.send()
-  alert(http.responseText);
-
 }
 
 
