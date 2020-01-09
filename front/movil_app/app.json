@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "movil",
-    "slug": "movil",
+    "name": "movil_app",
+    "slug": "movil_app",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
